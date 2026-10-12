@@ -102,3 +102,19 @@ POST	/api/results	Organiser (own)
 PUT	/api/results/{id}	Organiser (own)
 GET	/api/events/{eventId}/results	Organiser (own)
 GET	/api/users/me/results	Participant
+
+Rules I added
+Event type must be Run, Walk or Cycle
+A participant can’t enter the same event twice (unless they cancelled)
+A category with enrolments can’t be deleted
+An event with categories can’t be deleted
+Only one result per entry
+Swagger
+
+All endpoints show up in Swagger with a description. To test protected ones:
+
+Register an Organiser and a Participant with POST /api/Auth/register
+Log in with POST /api/Auth/login (the browser keeps the cookie)
+Call any protected endpoint
+To switch roles, log out and log in as the other user
+
