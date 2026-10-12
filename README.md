@@ -129,3 +129,17 @@ Event enrolments (participant and category are recorded, duplicates blocked, oth
 
 To run them: Test → Run All Tests in Visual Studio, or dotnet test in the solution folder.
 
+CI/CD
+
+A GitHub Actions workflow builds the API and runs all the tests on every push and pull request to main. You can see the runs in the Actions tab.
+
+Known issues / still to do
+The unit tests call the controller methods directly, so the 401/403 responses are shown by the role attribute checks and by Swagger, not by HTTP-level tests
+Live weather and route info for race day isn’t built yet
+Part 3 (containerisation and cloud) isn’t done yet
+Author
+
+KB (individual coursework project)
+
+Before you submit, check three things: the branch name in the workflow file matches your repo, the /docs folder has the endpoint table above with request bodies and responses, and the SQL script in /scripts is the final version (the one that creates all 6 tables).
+
