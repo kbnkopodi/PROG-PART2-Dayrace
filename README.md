@@ -16,3 +16,14 @@ Part 3: Not started yet
 Part 2: What’s built
 
 An ASP.NET Core Web API that follows my Part 1 plan. It connects to SQL Server using Entity Framework Core and has role-based session authentication, Swagger documentation, unit tests, and a GitHub Actions workflow that runs the tests.
+
+Tech used
+ASP.NET Core Web API (.NET 8, C#)
+Entity Framework Core (SQL Server)
+SQL Server
+Cookie-based session authentication
+BCrypt for password hashing
+Swagger (Swashbuckle)
+xUnit, Moq and the EF Core in-memory provider for tests
+GitHub Actions for CI
+
