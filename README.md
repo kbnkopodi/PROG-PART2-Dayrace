@@ -77,4 +77,28 @@ Organiser endpoints return 403 for Participants, and Participant endpoints retur
 Organisers can only change or view data for their own events
 The user is always taken from the session, never from the request body, so nobody can act as someone else
    
-
+Endpoints
+Method	Route	Role
+POST	/api/auth/register	Public
+POST	/api/auth/login	Public
+POST	/api/auth/logout	Logged in
+GET	/api/users/me	Logged in
+PUT	/api/users/me	Logged in
+GET	/api/events	Logged in
+GET	/api/events/{id}	Logged in
+POST	/api/events	Organiser
+PUT	/api/events/{id}	Organiser (own)
+DELETE	/api/events/{id}	Organiser (own)
+GET	/api/events/{eventId}/categories	Logged in
+GET	/api/categories/{id}	Logged in
+POST	/api/events/{eventId}/categories	Organiser (own)
+PUT	/api/categories/{id}	Organiser (own)
+DELETE	/api/categories/{id}	Organiser (own)
+POST	/api/entries	Participant
+GET	/api/users/me/entries	Participant
+PUT	/api/entries/{id}/cancel	Participant (own)
+GET	/api/events/{eventId}/entries	Organiser (own)
+POST	/api/results	Organiser (own)
+PUT	/api/results/{id}	Organiser (own)
+GET	/api/events/{eventId}/results	Organiser (own)
+GET	/api/users/me/results	Participant
