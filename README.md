@@ -57,3 +57,9 @@ Changed the date, distance and fee columns from NVARCHAR to proper types (DATETI
 Renamed the Route model to RaceRoute because it clashed with ASP.NET’s own Route class
 The password hash column in USERS is called PASSWORD, and it’s mapped to PasswordHash in the model
 
+How to run it
+Run the SQL script in /scripts on your SQL Server. It creates the RACEDAY database and all 6 tables.
+Open appsettings.json and set the connection string to your server:
+   "DefaultConnection": "Server=YOUR_SERVER;Database=RACEDAY;Trusted_Connection=True;TrustServerCertificate=True;"
+   
+
