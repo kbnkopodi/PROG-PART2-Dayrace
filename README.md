@@ -49,3 +49,11 @@ Event → many Routes
 Participants ↔ Events is many-to-many, resolved through ENTRIES (via CATEGORY)
 Entry → one Result
 
+I used EF Core, but the tables come from my SQL script rather than migrations. The models are mapped to the table names in RaceDayContext, so the schema still matches my Part 1 ERD.
+
+Changes from Part 1
+Added DESCRIPTION and DISTANCE to EVENT, because the brief says every event must capture them
+Changed the date, distance and fee columns from NVARCHAR to proper types (DATETIME2, FLOAT, DECIMAL) so they match the C# models
+Renamed the Route model to RaceRoute because it clashed with ASP.NET’s own Route class
+The password hash column in USERS is called PASSWORD, and it’s mapped to PasswordHash in the model
+
