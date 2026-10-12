@@ -118,3 +118,14 @@ Log in with POST /api/Auth/login (the browser keeps the cookie)
 Call any protected endpoint
 To switch roles, log out and log in as the other user
 
+Unit tests
+
+Tests are in /RaceDay.Tests and use an in-memory database, so they don’t touch SQL Server. They cover both success and failure cases for:
+
+Registration and login (including wrong password, duplicate email, invalid role, and checking the password is hashed)
+Event management (create, update, delete, invalid type, other organiser’s event)
+Role access (checks that each endpoint has the right role rule)
+Event enrolments (participant and category are recorded, duplicates blocked, other organiser can’t see entries)
+
+To run them: Test → Run All Tests in Visual Studio, or dotnet test in the solution folder.
+
