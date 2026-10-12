@@ -27,3 +27,15 @@ Swagger (Swashbuckle)
 xUnit, Moq and the EF Core in-memory provider for tests
 GitHub Actions for CI
 
+Folder structure
+
+/RaceDay          - the API project
+  /Controllers    - Auth, Events, Categories, Entries, Results, Users
+  /Data           - RaceDayContext (EF Core)
+  /Models         - entity classes and DTOs
+/RaceDay.Tests    - unit tests
+/docs             - API endpoint plan
+/scripts          - SQL script (create tables)
+/.github/workflows/ci.yml  (or dotnet.yml) - CI workflow
+README.md
+
