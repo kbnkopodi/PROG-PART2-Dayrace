@@ -61,5 +61,20 @@ How to run it
 Run the SQL script in /scripts on your SQL Server. It creates the RACEDAY database and all 6 tables.
 Open appsettings.json and set the connection string to your server:
    "DefaultConnection": "Server=YOUR_SERVER;Database=RACEDAY;Trusted_Connection=True;TrustServerCertificate=True;"
+
+Open the solution in Visual Studio and press F5.
+Swagger opens at https://localhost:7177/swagger.
+
+The script doesn’t include seed users. Register new ones through Swagger, because users need real hashed passwords to log in.
+
+Authentication and roles
+POST /api/Auth/register: create an account and choose a role (Organiser or Participant)
+POST /api/Auth/login: starts a session. The server sets a cookie, and the user’s id and role are stored in it
+POST /api/Auth/logout: ends the session
+Passwords are hashed with BCrypt and never stored in plain text
+Everything except register and login needs a logged-in user (returns 401 if not)
+Organiser endpoints return 403 for Participants, and Participant endpoints return 403 for Organisers
+Organisers can only change or view data for their own events
+The user is always taken from the session, never from the request body, so nobody can act as someone else
    
 
