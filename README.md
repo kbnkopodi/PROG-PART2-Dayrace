@@ -6,3 +6,9 @@ There are two types of users:
 
 Organisers can create events, add categories, view enrolments and capture results
 Participants can browse events, enter them and view their own results
+
+This is an individual project done in 3 parts:
+
+Part 1: Planning (ERD, API endpoint plan, SQL script)
+Part 2: The API (this part)
+Part 3: Not started yet
