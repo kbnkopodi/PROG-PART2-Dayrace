@@ -39,3 +39,13 @@ Folder structure
 /.github/workflows/ci.yml  (or dotnet.yml) - CI workflow
 README.md
 
+Database
+
+Six tables: USERS, EVENT, CATEGORY, ENTRIES, RESULTS, ROUTES.
+
+Organiser → many Events
+Event → many Categories
+Event → many Routes
+Participants ↔ Events is many-to-many, resolved through ENTRIES (via CATEGORY)
+Entry → one Result
+
