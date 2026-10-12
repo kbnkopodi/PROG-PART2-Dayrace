@@ -12,3 +12,7 @@ This is an individual project done in 3 parts:
 Part 1: Planning (ERD, API endpoint plan, SQL script)
 Part 2: The API (this part)
 Part 3: Not started yet
+
+Part 2: What’s built
+
+An ASP.NET Core Web API that follows my Part 1 plan. It connects to SQL Server using Entity Framework Core and has role-based session authentication, Swagger documentation, unit tests, and a GitHub Actions workflow that runs the tests.
