@@ -139,7 +139,7 @@ Live weather and route info for race day isn’t built yet
 Part 3 (containerisation and cloud) isn’t done yet
 Author
 
-KB (individual coursework project)
+KB
 
 Before you submit, check three things: the branch name in the workflow file matches your repo, the /docs folder has the endpoint table above with request bodies and responses, and the SQL script in /scripts is the final version (the one that creates all 6 tables).
 
